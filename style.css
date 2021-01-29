@@ -99,22 +99,17 @@ nav ul li a:hover, a.active{
     align-items: center;
 }
 .inp-width{
-    min-width: 100px;
+    min-width: 50px;
     font-weight: 700;
 }
 .plusMinusBtn{
-    width: 20px;
+    color: #041672;
+    font-weight: 800;
+    font-size: 20px;
+    width: 22px;
     height: 30px;
     margin-top: 15px;
-    font-size: 20px;
 }
-/* .plus-minus-btn{
-    color: #3352F2;
-    font-size: 30px;
-    padding: 2px;
-    margin: 10px 10px 0px 0px;
-    word-spacing: 20px;
-} */
 
 .btn-style{
     display: block;
@@ -129,4 +124,15 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+
+#bookingConfirmation{
+    width: 80%;
+    float: right;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 50px 0px 0px 80px;
 }

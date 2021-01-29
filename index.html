@@ -37,7 +37,7 @@
         </div>
 
 
-        <div class="booking-form">
+        <div id="bookingForm" class="booking-form">
             <h3>Explore By Bus</h3>
 
             <div class="inputs">
@@ -68,8 +68,8 @@
                         <input id="firstClassInput" class="inp-style inp-width" type="number" name="" value="0" min="0">
                     </div>
                     <div>
-                        <button id="firstClassMinusBtn" class="plusMinusBtn">-</button>
-                        <button id="firstClassPlusBtn" class="plusMinusBtn">+</button>
+                        <button onclick="plusMinusButtonHandler('firstClass',false)" class="plusMinusBtn">-</button>
+                        <button onclick="plusMinusButtonHandler('firstClass',true)" class="plusMinusBtn">+</button>
                     </div>
                 </div>
                 <div class="input-group f-class">
@@ -78,8 +78,8 @@
                         <input id="economyInput" class="inp-style inp-width" type="number" name="" value="0" min="0">
                     </div>
                     <div>
-                        <button id="economyMinusBtn" class="plusMinusBtn">-</button>
-                        <button id="economyPlusBtn" class="plusMinusBtn">+</button>
+                        <button onclick="plusMinusButtonHandler('economy',false)" class="plusMinusBtn">-</button>
+                        <button onclick="plusMinusButtonHandler('economy',true)" class="plusMinusBtn">+</button>
                     </div>
                 </div>
 
@@ -112,11 +112,16 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="bookNowBtnHandler()" class="btn-style">Book Now</button>
+        </div>
+
+        <div id="bookingConfirmation">
+            <h1>Hello</h1>
         </div>
     </main>
 
     <!--Thank You-->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
