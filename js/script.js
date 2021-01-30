@@ -15,9 +15,9 @@ function plusMinusButtonHandler(type, isIncrease) {
 
 
 // Check and Update for directly Input seat number in input box
-function directInputHandler(type){
+function directInputHandler(type) {
     let numOfSeat = getNumOfSeat(type + "Input");
-    
+
     // If numOfSeat negative or NaN, Then set it to Zero
     if (numOfSeat < 0 || !(numOfSeat)) numOfSeat = 0;
     setNumOfSeat(type + "Input", numOfSeat);
@@ -75,24 +75,32 @@ function isInputOkay() {
         document.getElementById("warningSeat").style.display = "none";
     }
 
-    // warning for setting up Departure and Return Date
-    if (getConfirmValue("departureDate") == '') {
-        warningDate("Departure");
+    // warning: To set up Departure and Return Date
+    let departureDate = getConfirmValue("departureDate");
+    let returnDate = getConfirmValue("returnDate");
+
+    if (departureDate == '') {
+        warningDate("Please Select Departure Date");
         return false;
     }
-    else if (getConfirmValue("returnDate") == '') {
-        warningDate("Return")
+    else if (returnDate == '') {
+        warningDate("Please Select Return Date");
         return false;
-    } else {
+    }
+    else if (departureDate > returnDate) {
+        warningDate("Return Date must be Same or After Departure Date");
+        return false;
+    }
+    else {
         document.getElementById("warningDate").style.display = "none";
     }
     return true;
 }
 
 
-function warningDate(type) {
+function warningDate(warningText) {
     document.getElementById("warningDate").style.display = "block";
-    document.getElementById("warningDate").innerText = "Please Select " + type + " Date";
+    document.getElementById("warningDate").innerText = warningText;
 }
 
 
