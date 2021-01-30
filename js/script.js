@@ -64,8 +64,7 @@ function isInputOkay() {
     if (firstClassSeat == 0 && economySeat == 0) {
         document.getElementById("warningSeat").style.display = "block";
         return false;
-    }
-    else {
+    } else {
         document.getElementById("warningSeat").style.display = "none";
     }
 
@@ -77,8 +76,7 @@ function isInputOkay() {
     else if (getConfirmValue("returnDate") == '') {
         warningDate("Return")
         return false;
-    }
-    else {
+    } else {
         document.getElementById("warningDate").style.display = "none";
     }
     return true;
@@ -109,9 +107,13 @@ function displayConfirmationInfo() {
     // Default: Dhaka - Chittagong
     if (getConfirmValue("startFrom")) {
         setConfirmOutput("confirmFrom", getConfirmValue("startFrom"));
+    } else {
+        setConfirmOutput("confirmFrom", "Dhaka");
     }
     if (getConfirmValue("endTo")) {
         setConfirmOutput("confirmTo", getConfirmValue("endTo"));
+    } else {
+        setConfirmOutput("confirmTo", "Chittagong");
     }
 }
 
@@ -127,17 +129,17 @@ function getConfirmValue(id) {
 function newBookingHandler() {
     document.getElementById("bookingForm").style.display = "block";
     document.getElementById("bookingConfirmation").style.display = "none";
-    
-    setNumOfSeat("firstClassInput",0);
+
+    setNumOfSeat("firstClassInput", 0);
     setNumOfSeat("economyInput", 0);
     updateCostAmount();
 
-    setNewValue("startFrom","");
-    setNewValue("endTo","");
-    setNewValue("departureDate","");
-    setNewValue("returnDate","");
+    setNewValue("startFrom", "");
+    setNewValue("endTo", "");
+    setNewValue("departureDate", "");
+    setNewValue("returnDate", "");
 }
 
-function setNewValue(id,value){
+function setNewValue(id, value) {
     document.getElementById(id).value = value;
 }

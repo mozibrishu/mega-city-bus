@@ -128,6 +128,7 @@ a.active {
   justify-content: space-between;
 }
 
+
 #bookingConfirmation {
   width: 80%;
   float: right;
@@ -143,6 +144,10 @@ a.active {
 #confirmHeading {
   text-align: center;
   color: #52af3a;
+}
+
+.spacing{
+  margin-top: 30px;
 }
 .infoBox {
   width: 95%;
@@ -163,6 +168,7 @@ a.active {
   grid-template-columns: 1fr;
   grid-row-gap: 30px;
   text-align: left;
+  font-weight: 600;
   padding: 10px;
 }
 .subGrid {
