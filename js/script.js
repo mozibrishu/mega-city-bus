@@ -94,6 +94,8 @@ function isInputOkay() {
     else {
         document.getElementById("warningDate").style.display = "none";
     }
+
+    // Everything Okay
     return true;
 }
 
@@ -125,12 +127,14 @@ function displayConfirmationInfo() {
     } else {
         setConfirmOutput("confirmFrom", "Dhaka");
     }
+
     if (getConfirmValue("endTo")) {
         setConfirmOutput("confirmTo", getConfirmValue("endTo"));
     } else {
         setConfirmOutput("confirmTo", "Chittagong");
     }
 }
+
 
 function setConfirmOutput(id, value) {
     document.getElementById(id).innerText = value;

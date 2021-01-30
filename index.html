@@ -66,7 +66,8 @@
                 <div class="input-group f-class">
                     <div>
                         <label for="">First Class ($150)</label>
-                        <input onchange="directInputHandler('firstClass')" id="firstClassInput" class="inp-style inp-width" type="number" name="" value="0" min="0">
+                        <input onchange="directInputHandler('firstClass')" id="firstClassInput"
+                            class="inp-style inp-width" type="number" name="" value="0" min="0">
                     </div>
                     <div>
                         <button onclick="plusMinusButtonHandler('firstClass',false)" class="plusMinusBtn">-</button>
@@ -76,7 +77,8 @@
                 <div class="input-group f-class">
                     <div>
                         <label for="">Economy ($100)</label>
-                        <input onchange="directInputHandler('economy')" id="economyInput" class="inp-style inp-width" type="number" name="" value="0" min="0">
+                        <input onchange="directInputHandler('economy')" id="economyInput" class="inp-style inp-width"
+                            type="number" name="" value="0" min="0">
                     </div>
                     <div>
                         <button onclick="plusMinusButtonHandler('economy',false)" class="plusMinusBtn">-</button>
@@ -117,6 +119,7 @@
             <button onclick="bookNowBtnHandler()" class="btn-style">Book Now</button>
         </div>
 
+        <!-- Extra Section: Booking Confirmed -->
         <div id="bookingConfirmation">
             <h1 id="confirmHeading">Booking Confirmed</h1>
             <div class="infoBox">
@@ -129,26 +132,26 @@
                         <div class="">Return: <span id="confirmReturn"></span></div>
 
                         <div class="">First Class Seat: <span id="confirmFirstClass">0</span></div>
-                        <div class="confirmCalculation">
+                        <div class="amount">
                             <div class="left">First Class Cost: </div>
                             <div class="right">$<span id="confirmFirstClassCost">0</span></div>
                         </div>
                         <div class="">Economy Seat: <span id="confirmEconomy">0</span></div>
-                        <div class="confirmCalculation">
+                        <div class="amount">
                             <div class="left">Economy Seat Cost: </div>
                             <div class="right">$<span id="confirmEconomyCost">0</span></div>
                         </div>
                     </div>
-                    <div class="confirmCalculation spacing" >
+                    <div class="amount spacing">
                         <div class="left">Subtotal: </div>
                         <div class="right">$<span id="confirmSubTotal">0</span></div>
                     </div>
-                    <div class="confirmCalculation">
+                    <div class="amount">
                         <div class="left">Tax(10%): </div>
                         <div class="right">$<span id="confirmTax">0</span></div>
                     </div>
                     <hr>
-                    <div class="confirmCalculation">
+                    <div class="amount">
                         <div class="left">Total: </div>
                         <div class="right">$<span id="confirmTotal">0</span></div>
                     </div>
