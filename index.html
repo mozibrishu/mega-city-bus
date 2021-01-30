@@ -43,23 +43,24 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">From</label>
-                        <input class="inp-style" type="text" name="" placeholder="Dhaka">
+                        <input id="startFrom" class="inp-style" type="text" name="" placeholder="Dhaka">
                 </div>
                 <div class="input-group">
                     <label" for="">To</label>
-                        <input class="inp-style" type="text" name="" placeholder="Chittagong">
+                        <input id="endTo" class="inp-style" type="text" name="" placeholder="Chittagong">
                 </div>
             </div>
 
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                        <input class="inp-style" type="date" name="">
+                        <input id="departureDate" class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input id="returnDate" class="inp-style" type="date" name="">
                 </div>
+                <p id="warningDate" class="warning">*Please Select Date.</p>
             </div>
             <div class="inputs">
                 <div class="input-group f-class">
@@ -82,6 +83,7 @@
                         <button onclick="plusMinusButtonHandler('economy',true)" class="plusMinusBtn">+</button>
                     </div>
                 </div>
+                <p id="warningSeat" class="warning">*Please Select atleast one seat.</p>
 
             </div>
             <div class="calculations">
@@ -118,15 +120,42 @@
         <div id="bookingConfirmation">
             <h1 id="confirmHeading">Booking Confirmed</h1>
             <div class="infoBox">
-                <div class="grid-container" style="text-align: center;">
-                    <div class=""><strong>From:</strong> Dhaka</div>
-                    <div class=""><strong>To:</strong> Chittagong</div>
+                <div class="grid-container">
+                    <div class="subGrid">
+                        <div class=""><strong>From: </strong><span id="confirmFrom">Dhaka</span> </div>
+                        <div class=""><strong>To: </strong> <span id="confirmTo">Chittagong</span></div>
 
-                    <div class=""><strong>Departure:</strong> Dhaka</div>
-                    <div class=""><strong>Return:</strong> Chittagong</div>
+                        <div class=""><strong>Departure:</strong> <span id="confirmDeparture"></span></div>
+                        <div class=""><strong>Return:</strong> <span id="confirmReturn"></span></div>
+
+                        <div class=""><strong>First Class Seat: </strong><span id="confirmFirstClass">0</span></div>
+                        <div class="confirmCalculation">
+                            <div class="left"><Strong>First Class Cost: </Strong></div>
+                            <div class="right"><strong>$<span id="confirmFirstClassCost">0</span></strong></div>
+                        </div>
+                        <div class=""><strong>Economy Seat: </strong><span id="confirmEconomy">0</span></div>
+                        <div class="confirmCalculation">
+                            <div class="left"><Strong>Economy Seat Cost: </Strong></div>
+                            <div class="right"><strong>$<span id="confirmEconomyCost">0</span></strong></div>
+                        </div>
+                    </div>
+                    <div class="confirmCalculation">
+                        <div class="left"><Strong>Subtotal: </Strong></div>
+                        <div class="right"><strong>$<span id="confirmSubTotal">0</span></strong></div>
+                    </div>
+                    <div class="confirmCalculation">
+                        <div class="left"><Strong>Tax: </Strong></div>
+                        <div class="right"><strong>$<span id="confirmTax">0</span></strong></div>
+                    </div>
+                    <hr>
+                    <div class="confirmCalculation">
+                        <div class="left"><Strong>Total: </Strong></div>
+                        <div class="right"><strong>$<span id="confirmTotal">0</span></strong></div>
+                    </div>
+
                 </div>
-                
             </div>
+            <button onclick="newBookingHandler()" class="newBookingBtn">New Booking</button>
         </div>
     </main>
 
