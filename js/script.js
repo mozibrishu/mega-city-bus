@@ -9,13 +9,20 @@ function plusMinusButtonHandler(type, isIncrease) {
         }
     }
 
-    // checking for Direct Negative Input
-    if (numOfSeat < 0) numOfSeat = 0;
-
     setNumOfSeat(type + "Input", numOfSeat);
     updateCostAmount();
 }
 
+
+// Check and Update for directly Input seat number in input box
+function directInputHandler(type){
+    let numOfSeat = getNumOfSeat(type + "Input");
+    
+    // If numOfSeat negative or NaN, Then set it to Zero
+    if (numOfSeat < 0 || !(numOfSeat)) numOfSeat = 0;
+    setNumOfSeat(type + "Input", numOfSeat);
+    updateCostAmount();
+}
 
 function updateCostAmount() {
     let firstClassSeat = getNumOfSeat("firstClassInput");
